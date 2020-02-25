@@ -1,0 +1,772 @@
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        html {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 5px;
+            &-thumb {
+                background: #21212E;
+                &:hover {
+                    background: #555;
+                }
+            }
+        }
+        
+        body {
+            margin: 0;
+            background-color: #252530;
+            .container {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-left: auto;
+                margin-right: auto;
+                // overflow-x: hidden;
+            }
+            header {
+                min-height: 100px;
+                height: 100%;
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                .logoImg {
+                    float: left;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        width: 50%;
+                    }
+                }
+                nav {
+                    display: block;
+                    float: right;
+                }
+                nav,
+                .menu {
+                    display: flex;
+                    height: 100%;
+                    padding-left: 0;
+                    width: 60%;
+                    justify-content: space-around;
+                    align-items: baseline;
+                    li {
+                        height: 100%;
+                        list-style: none;
+                        font-family: 'Muli', sans-serif;
+                        font-style: normal;
+                        font-weight: lighter;
+                        font-size: 20px;
+                        text-align: left;
+                        white-space: nowrap;
+                    }
+                    .customButton {
+                        border: 1px solid #fff;
+                        padding: 10px;
+                        display: flex;
+                        border-radius: 8px;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                    a {
+                        height: 100%;
+                        text-decoration: none;
+                        color: rgba(102, 102, 126, 1);
+                    }
+                }
+            }
+            .slideHeader {
+                display: flex;
+                justify-content: center;
+                padding: 0% 10%;
+                min-height: 60vh;
+                div {
+                    flex: 1;
+                    color: #fff;
+                    font-family: 'Muli', sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    h1 {
+                        font-style: normal;
+                        font-weight: lighter;
+                        font-size: 55px;
+                        text-align: left;
+                    }
+                    p {
+                        line-height: 30px;
+                        text-align: left;
+                        font-weight: lighter;
+                        font-size: 16px;
+                        color: rgba(102, 102, 126, 1);
+                    }
+                    .btnSlide {
+                        margin-top: 10%;
+                        a {
+                            padding: 3% 10%;
+                            border-radius: 8px;
+                        }
+                        .customButton {
+                            border: 1px solid #fff;
+                            // display: flex;
+                        }
+                        .customButtonWithBackground {
+                            background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                            box-shadow: 0px 0px 16px 0px #BD11FA;
+                        }
+                    }
+                    .freeImg {
+                        text-align: right;
+                        margin-right: -26%;
+                        height: 204.096px;
+                        position: relative;
+                        z-index: 1;
+                    }
+                }
+                .slideBackground {
+                    background-image: url("../assets/img/slideBackground.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: relative;
+                    z-index: -1;
+                    background-size: 100% 100%;
+                    margin-right: -13%;
+                }
+                &:after {
+                    content: "";
+                    width: 45%;
+                    position: absolute;
+                    height: 71vh;
+                    right: 0;
+                    background-color: #21212e;
+                    opacity: 0.8;
+                }
+            }
+            .partener {
+                display: flex;
+                margin-top: 8%;
+                .item {
+                    &-left {
+                        div {
+                            display: flex;
+                            align-items: flex-end;
+                            margin-bottom: 2%;
+                            width: 100%;
+                            .specialTriangle {
+                                img {
+                                    height: 282.14px;
+                                }
+                            }
+                            div {
+                                &:not(.specialTriangle) {
+                                    margin-right: 5%;
+                                    padding: 35px;
+                                    background-color: rgba(33, 33, 46, 1);
+                                    border-radius: 7px;
+                                    box-shadow: 4px 0px 49px 10px #000000;
+                                    img {
+                                        align-self: center;
+                                        margin: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-right {
+                        .contentText {
+                            padding: 31% 13% 0 13%;
+                            h1 {
+                                font-family: Muli;
+                                color: #fff;
+                                font-size: 36px;
+                                line-height: 40px;
+                            }
+                            p {
+                                font-family: Muli;
+                                font-weight: lighter;
+                                font-size: 16px;
+                                color: rgba(102, 102, 126, 1);
+                                line-height: 35px;
+                            }
+                        }
+                        .circle {
+                            display: flex;
+                            justify-content: flex-end;
+                            overflow-x: hidden;
+                            margin-right: -1%;
+                            .circleItem {
+                                margin-right: -25%;
+                                img {
+                                    height: 501.03px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .feature {
+                display: flex;
+                .mText {
+                    margin-top: 5%;
+                }
+                .cards {
+                    display: flex;
+                    padding-left: 0;
+                }
+                div {
+                    width: 50%;
+                    padding: 0% 7%;
+                    .cardItem {
+                        margin-top: 45%;
+                        margin-right: 25%;
+                        .card {
+                            margin-bottom: 15%;
+                        }
+                    }
+                    .mt {
+                        margin-top: 70%;
+                    }
+                    div {
+                        background: #1e3538;
+                        width: 184px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 49px;
+                        flex-direction: column;
+                        span {
+                            color: rgba(0, 236, 152, 1);
+                            font-size: 16px;
+                            font-weight: bold;
+                            font-family: Muli;
+                        }
+                        .card {
+                            display: flex;
+                            flex-direction: column;
+                            height: 431px;
+                            width: 170%;
+                            background-color: #21212e;
+                            border-radius: 10px;
+                            box-shadow: 4px 0px 49px 10px #000000;
+                            div {
+                                margin-top: 12%;
+                                height: 103px;
+                                align-items: baseline;
+                                width: 91%;
+                                background: #39394D;
+                                img {
+                                    height: 60.417px;
+                                }
+                            }
+                            h1 {
+                                font-size: 23px;
+                                font-weight: bold;
+                                font-family: Muli;
+                                align-self: baseline;
+                            }
+                            p {
+                                font-weight: lighter;
+                                font-size: 16px;
+                                font-family: Muli;
+                            }
+                        }
+                    }
+                    h1 {
+                        line-height: 40px;
+                        font-family: Muli;
+                        font-weight: bold;
+                        font-size: 36px;
+                        color: rgba(255, 255, 255, 1);
+                    }
+                    p {
+                        font-weight: lighter;
+                        font-size: 16px;
+                        color: rgba(102, 102, 126, 1);
+                        font-family: Muli;
+                        line-height: 35px;
+                        margin-bottom: 40px;
+                    }
+                    a {
+                        padding: 3% 10%;
+                        border-radius: 8px;
+                        background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                        font-size: 20px;
+                        color: rgba(255, 255, 255, 1);
+                        font-family: Muli;
+                        white-space: nowrap;
+                        box-shadow: 0px 0px 16px 0px #BD11FA;
+                    }
+                }
+            }
+            .evening {
+                margin-top: 35%;
+                display: flex;
+                height: 100vh;
+                .item {
+                    &-left {
+                        padding: 0 5%;
+                        .blockWithBackground {
+                            width: 70%;
+                            margin: auto;
+                            height: 40vh;
+                            margin-bottom: 9%;
+                            background: linear-gradient(124deg, #609bfe 0%, #7976fd 35%, #bd11fa 100%);
+                            div {
+                                height: 65px;
+                            }
+                            .title {
+                                display: flex;
+                                justify-content: space-around;
+                                h1 {
+                                    font-family: Muli;
+                                    font-weight: bold;
+                                    color: #fff;
+                                    font-size: 34px;
+                                }
+                            }
+                            .subtitle {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                h2 {
+                                    margin-left: -7%;
+                                    font-size: 22px;
+                                    font-family: Muli;
+                                    font-style: normal;
+                                    font-weight: normal;
+                                    color: #fff;
+                                }
+                                span {
+                                    // margin-left: 10%;
+                                    font-size: 13px;
+                                    color: rgba(9, 13, 23, 1);
+                                }
+                            }
+                        }
+                        .divLight {
+                            display: flex;
+                            width: 100%;
+                            position: relative;
+                            bottom: 30%;
+                            border-radius: 10px;
+                            .lightItem {
+                                padding: 5%;
+                                background-color: #21212e;
+                                box-shadow: 4px 0px 49px 10px #000000;
+                                border-radius: 10px;
+                                &:first-child {
+                                    margin-right: 5%;
+                                    margin-top: 10%;
+                                }
+                                &:nth-child(2) {
+                                    width: 215px;
+                                }
+                                .title {
+                                    background: #39394D;
+                                    padding: 3%;
+                                    display: flex;
+                                    justify-content: center;
+                                    width: 260px;
+                                    right: 13.5%;
+                                    position: relative;
+                                }
+                                .box {
+                                    .percent {
+                                        svg {
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 15% 15% auto;
+                                            display: block;
+                                            circle {
+                                                fill: none;
+                                                stroke: #191919;
+                                                stroke-width: 5;
+                                                width: 100%;
+                                                height: 100%;
+                                                stroke-linecap: round;
+                                                transform: translate(5px, 5px);
+                                                &:nth-child(2) {
+                                                    stroke-dasharray: 440;
+                                                    stroke-dashoffset: calc(440 + (440 * 26) / 100);
+                                                    stroke: rgb(0, 236, 152);
+                                                }
+                                            }
+                                        }
+                                        .number {
+                                            position: absolute;
+                                            top: 44px;
+                                            left: 220px;
+                                            width: 90%;
+                                            height: 90%;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 50%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            h2 {
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 48px;
+                                                margin: 0;
+                                            }
+                                            h3 {
+                                                font-family: Muli;
+                                                font-style: normal;
+                                                font-weight: normal;
+                                                font-size: 17px;
+                                                margin: 0;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            h1,
+                            h2 {
+                                color: #fff;
+                                font-family: Muli;
+                                font-style: normal;
+                                white-space: nowrap;
+                            }
+                            h1 {
+                                font-size: 24px;
+                            }
+                            h2 {
+                                font-size: 16px;
+                            }
+                            span {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 12px;
+                                color: rgba(102, 102, 126, 1);
+                            }
+                            .lightHour {
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 5%;
+                            }
+                        }
+                        .blockRuning {
+                            display: flex;
+                            width: 70%;
+                            position: relative;
+                            bottom: 50%;
+                            border-radius: 10px;
+                            left: 15%;
+                            height: 50vh;
+                            padding: 30% 0 0;
+                            box-shadow: 4px 0px 49px 10px #000000;
+                            z-index: -1;
+                            color: #fff;
+                            flex-direction: column;
+                            .title {
+                                display: flex;
+                                justify-content: space-around;
+                                align-items: baseline;
+                                width: 100%;
+                            }
+                            h1 {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 22px;
+                                margin: 0;
+                            }
+                            span {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-size: 22px;
+                                color: rgba(133, 99, 252, 1);
+                            }
+                            .runingItem {
+                                display: flex;
+                                justify-content: space-around;
+                                margin-top: 30px;
+                                .cardRuning {
+                                    width: 30%;
+                                    box-shadow: 4px 0px 49px 10px #000000;
+                                    padding: 5%;
+                                    border-radius: 10px;
+                                    &:nth-child(2) {
+                                        transform: translateY(30px);
+                                    }
+                                    .headerRuning {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: flex-start;
+                                        span {
+                                            border-radius: 100%;
+                                            width: 10px;
+                                            height: 10px;
+                                            background: #00ec98;
+                                        }
+                                    }
+                                    .bodyRunning {
+                                        background: #39394D;
+                                        width: 120%;
+                                        margin-left: -15%;
+                                        padding: 5%;
+                                        margin-top: 10%;
+                                        h1 {
+                                            font-family: Muli;
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 17px;
+                                        }
+                                        h2 {
+                                            font-family: Muli;
+                                            font-style: normal;
+                                            font-weight: normal;
+                                            font-size: 13px;
+                                            color: rgba(102, 102, 126, 1)
+                                        }
+                                    }
+                                    .power {
+                                        img {
+                                            position: relative;
+                                            top: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &-right {
+                        .mText {
+                            margin-top: 30%;
+                        }
+                        div {
+                            padding: 0% 7%;
+                            div {
+                                background: #1e3538;
+                                width: 184px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 49px;
+                                flex-direction: column;
+                                span {
+                                    color: rgba(0, 236, 152, 1);
+                                    font-size: 16px;
+                                    font-weight: bold;
+                                    font-family: Muli;
+                                }
+                            }
+                            h1 {
+                                line-height: 40px;
+                                font-family: Muli;
+                                font-weight: bold;
+                                font-size: 36px;
+                                color: rgba(255, 255, 255, 1);
+                            }
+                            p {
+                                font-weight: lighter;
+                                font-size: 16px;
+                                color: rgba(102, 102, 126, 1);
+                                font-family: Muli;
+                                line-height: 35px;
+                                margin-bottom: 40px;
+                            }
+                            a {
+                                padding: 3% 10%;
+                                border-radius: 8px;
+                                background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                                font-size: 20px;
+                                color: rgba(255, 255, 255, 1);
+                                font-family: Muli;
+                                white-space: nowrap;
+                                box-shadow: 0px 0px 16px 0px #BD11FA;
+                            }
+                        }
+                        .mImage {
+                            margin-top: 30%;
+                            img {
+                                margin-left: 10%;
+                                height: 456.434px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pricing {
+                margin-top: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1 {
+                    font-family: Muli;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 36px;
+                    color: #fff;
+                    margin: 5px 0;
+                }
+                span {
+                    font-family: Muli;
+                    font-style: normal;
+                    font-weight: lighter;
+                    font-size: 20px;
+                    color: rgba(102, 102, 126, 1);
+                }
+                .priceType {
+                    border: 1px solid #fff;
+                    padding: 1%;
+                    margin-top: 1%;
+                    margin-bottom: 5%;
+                    width: 10%;
+                    display: flex;
+                    justify-content: space-around;
+                    a {
+                        font-family: Muli;
+                        font-style: normal;
+                        font-weight: lighter;
+                        font-size: 18px;
+                        color: rgba(102, 102, 126, 1);
+                        &:after {
+                            content: "";
+                            border-right: 1px solid #fff;
+                            color: rgba(102, 102, 126, 1);
+                            margin-left: 12%;
+                        }
+                        &:last-child:after {
+                            border: none;
+                        }
+                        &.active {
+                            font-family: Muli;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 18px;
+                            color: #fff;
+                        }
+                    }
+                }
+                .pricingCard {
+                    text-align: center;
+                    display: flex;
+                    margin: 0 100px;
+                    margin-bottom: 5%;
+                    &_basic {
+                        padding: 3% 0;
+                        background-color: #21212e;
+                        box-shadow: 4px 0px 49px 10px #000000;
+                        border-radius: 10px;
+                        flex: 1;
+                        height: 82vh;
+                        .CardHeader {
+                            padding: 3%;
+                            background: #39394D;
+                            margin-bottom: 5%;
+                        }
+                        div {
+                            p {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: lighter;
+                                font-size: 20px;
+                                color: rgba(102, 102, 126, 1);
+                                line-height: 60px;
+                                margin: auto;
+                                margin-top: 15%;
+                                margin-bottom: 15%;
+                                width: 75%;
+                            }
+                            a {
+                                padding: 3% 10%;
+                                border-radius: 8px;
+                                background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                                font-size: 20px;
+                                color: rgba(255, 255, 255, 1);
+                                font-family: Muli;
+                                white-space: nowrap;
+                                box-shadow: 0px 0px 16px 0px #BD11FA;
+                            }
+                        }
+                    }
+                    &_business {
+                        background-color: #21212e;
+                        box-shadow: 4px 0px 49px 10px #000000;
+                        border-radius: 10px;
+                        padding: 3% 0;
+                        flex: 1.3;
+                        position: relative;
+                        z-index: 10;
+                        bottom: 55px;
+                        .CardHeader {
+                            padding: 3%;
+                            background: #39394D;
+                            margin-bottom: 5%;
+                        }
+                        div {
+                            p {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: lighter;
+                                font-size: 20px;
+                                color: rgba(102, 102, 126, 1);
+                                line-height: 60px;
+                                margin: auto;
+                                margin-top: 15%;
+                                margin-bottom: 15%;
+                                width: 70%;
+                            }
+                            a {
+                                padding: 3% 10%;
+                                border-radius: 8px;
+                                background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                                font-size: 20px;
+                                color: rgba(255, 255, 255, 1);
+                                font-family: Muli;
+                                white-space: nowrap;
+                                box-shadow: 0px 0px 16px 0px #BD11FA;
+                            }
+                        }
+                    }
+                    &_company {
+                        background-color: #21212e;
+                        box-shadow: 4px 0px 49px 10px #000000;
+                        border-radius: 10px;
+                        padding: 3% 0;
+                        flex: 1;
+                        height: 82vh;
+                        .CardHeader {
+                            padding: 3%;
+                            background: #39394D;
+                            margin-bottom: 5%;
+                        }
+                        div {
+                            p {
+                                font-family: Muli;
+                                font-style: normal;
+                                font-weight: lighter;
+                                font-size: 20px;
+                                color: rgba(102, 102, 126, 1);
+                                line-height: 60px;
+                                margin: auto;
+                                margin-top: 15%;
+                                margin-bottom: 15%;
+                                width: 75%;
+                            }
+                            a {
+                                padding: 3% 10%;
+                                border-radius: 8px;
+                                background: linear-gradient(124deg, rgba(96, 155, 254, 1) 0%, rgba(121, 118, 253, 1) 35%, rgba(189, 17, 250, 1) 100%);
+                                font-size: 20px;
+                                color: rgba(255, 255, 255, 1);
+                                font-family: Muli;
+                                white-space: nowrap;
+                                box-shadow: 0px 0px 16px 0px #BD11FA;
+                            }
+                        }
+                    }
+                }
+                .freeImg {
+                    width: 100%;
+                    img {
+                        height: 210.727px;
+                    }
+                }
+            }
+        }
