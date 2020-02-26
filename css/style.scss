@@ -13,10 +13,26 @@
                 }
             }
         }
+
+        @keyframes expand {
+            0% {
+                opacity: 0;
+                display: none;
+            }
+            50% {
+                opacity: 0.5;
+                display: block;
+            }
+            100% {
+                opacity: 1;
+                display: block;
+            }
+        }
         
         body {
             margin: 0;
             background-color: #252530;
+            overflow-x: hidden;
             .container {
                 padding-right: 15px;
                 padding-left: 15px;
@@ -136,7 +152,7 @@
                     content: "";
                     width: 45%;
                     position: absolute;
-                    height: 71vh;
+                    height: 60%;
                     right: 0;
                     background-color: #21212e;
                     opacity: 0.8;
@@ -299,7 +315,7 @@
                 }
             }
             .evening {
-                margin-top: 35%;
+                margin-top: 500px;
                 display: flex;
                 height: 100vh;
                 .item {
@@ -527,7 +543,7 @@
                                     .power {
                                         img {
                                             position: relative;
-                                            top: 20px;
+                                            top: 15px;
                                         }
                                     }
                                 }
@@ -592,7 +608,7 @@
                 }
             }
             .pricing {
-                margin-top: 30%;
+                margin-top: 400px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -629,7 +645,7 @@
                             content: "";
                             border-right: 1px solid #fff;
                             color: rgba(102, 102, 126, 1);
-                            margin-left: 12%;
+                            margin-left: 10%;
                         }
                         &:last-child:after {
                             border: none;
@@ -654,7 +670,7 @@
                         box-shadow: 4px 0px 49px 10px #000000;
                         border-radius: 10px;
                         flex: 1;
-                        height: 82vh;
+                        height: 50%;
                         .CardHeader {
                             padding: 3%;
                             background: #39394D;
@@ -730,7 +746,7 @@
                         border-radius: 10px;
                         padding: 3% 0;
                         flex: 1;
-                        height: 82vh;
+                        height: 50%;
                         .CardHeader {
                             padding: 3%;
                             background: #39394D;
@@ -766,6 +782,179 @@
                     width: 100%;
                     img {
                         height: 210.727px;
+                    }
+                }
+            }
+            .support{
+                text-align: center;
+                h1{
+                    font-family: Muli;
+                    font-weight: bold;
+                    color: #fff;
+                    font-size: 36px;
+                }
+                span {
+                    font-size: 20px;
+                    color: #66667e;
+                    font-family: Muli;
+                    font-weight: lighter;
+                }
+                .accord{
+                    display: flex;
+                    margin-top: 50px;
+                    padding: 0 60px;
+                    &_left{
+                        flex: 1;
+                        margin-right: 10px;
+                    }
+                    &_right{
+                        flex: 1;
+                        margin-left: 10px;
+                    }
+                    &_row{
+                        background-color: #21212e;
+                        box-shadow: 4px 0px 49px 10px #000000;
+                        margin-bottom: 30px;
+                        &_header {
+                            display: flex;
+                            justify-content: space-around;
+                            border-radius: 10px;
+                            margin-bottom: 20px;
+                            h2{
+                                flex: 1;
+                                color: #fff;
+                                font-family: Muli;
+                                font-weight: 600;
+                            }
+                            button {
+                                flex: 0.1;
+                                margin: 0;
+                                background-color: #262634;
+                                border: none;
+                                font-size: 50px;
+                                color: #00ec98;
+                                outline: none;
+                            }
+                        }
+                        &_content{
+                            padding: 0.3% 2%;
+                            display: none;
+                            p{
+                                font-size: 16px;
+                                font-family: Muli;
+                                color: #66667e;
+                                text-align: left;
+                            }
+                        }
+                        .active{
+                            animation: expand ease-in-out 0.4s;
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .getStarted{
+                display: flex;
+                padding: 30px 75px;
+                margin-top: 85px;
+                div{
+                    flex: 1;
+                    h1 {
+                        font-family: Muli;
+                        font-size: 36px;
+                        font-weight: bold;
+                        color: #fff;
+                        margin: 0;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size: 16px;
+                        font-family: Muli;
+                        color: #66667e;
+                        line-height: 30px;
+                        margin: 0;                    
+                    }
+                    a{
+                        padding: 3% 10%;
+                        border-radius: 8px;
+                        background: linear-gradient(124deg, #609bfe 0%, #7976fd 35%, #bd11fa 100%);
+                        font-size: 20px;
+                        color: white;
+                        font-family: Muli;
+                        white-space: nowrap;
+                        -webkit-box-shadow: 0px 0px 16px 0px #BD11FA;
+                        box-shadow: 0px 0px 16px 0px #BD11FA;
+                    }
+                    &.getStartedBtn{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-end;
+                    }
+                }
+            }
+            .getBackground{
+                background-color: #363644;
+            }
+            footer{
+                .footer {
+                    display: flex;
+                    padding: 30px 75px;
+
+                    &_description{
+                        flex: 4;
+                        padding: 15px;
+                        p{
+                            &:nth-child(2){
+                                margin-top: 55px;
+                            }
+                        }
+                    }
+                    &_links, &_contact, &_social{
+                        flex: 2;
+                        padding: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 10px;
+                        h1{
+                            font-size: 20px;
+                            font-family: Muli;
+                            color: #fff;
+                            font-weight: 600;
+                        }
+                        ul{
+                            padding: 0;
+                            li{
+                                list-style: none;
+                            }
+                        }
+                    }
+                    &_social{
+                        flex: 3;
+                        h1{
+                            text-align: right;
+                        }
+                        ul {
+                            display: flex;
+                            justify-content: flex-end;
+                            li{
+                                margin-right: 30px;
+                                &:last-child{
+                                    margin-right: 0;
+                                }
+                                a{
+                                    img{
+                                        height: 4vh;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    p, li{
+                        font-size: 16px;
+                        font-family: Muli;
+                        color: #66667e;
+                        font-weight: lighter;
                     }
                 }
             }
